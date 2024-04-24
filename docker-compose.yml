@@ -1,0 +1,15 @@
+version: '3'
+services:
+  database:
+    image: 'postgres:16.2-alpine'
+    container_name: 'micro_train-pg-16.2'
+    ports:
+      - 5432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: qwerty
+      POSTGRES_PASSWORD: qwerty
+      POSTGRES_DB: micro_train
+volumes:
+  pgdata:
