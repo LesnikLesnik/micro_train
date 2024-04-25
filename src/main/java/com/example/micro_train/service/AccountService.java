@@ -23,6 +23,7 @@ public class AccountService {
 
     public UUID createAccount(AccountRequestDTO accountRequestDTO){
         Account account = accountMapper.toAccount(accountRequestDTO);
+        account.setId(UUID.randomUUID());
         return accountRepository.save(account).getId();
     }
 

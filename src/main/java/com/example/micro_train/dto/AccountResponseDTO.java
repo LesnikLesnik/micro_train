@@ -1,8 +1,15 @@
 package com.example.micro_train.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.UUID;
+
+@Getter
+@Setter
 public class AccountResponseDTO {
 
-    private Long accountId;
+    private UUID accountId;
 
     private String name;
 

@@ -4,8 +4,6 @@ import lombok.*;
 
 @Setter
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
 public class AccountRequestDTO {
 
     private String name;

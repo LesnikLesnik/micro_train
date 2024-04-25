@@ -12,14 +12,11 @@ import java.util.UUID;
 @Mapper
 public interface AccountMapper {
 
-    public abstract AccountResponseDTO toResponseDTO(Account account);
+    @Mapping(target = "accountId", source = "id")
+    AccountResponseDTO toResponseDTO(Account account);
 
 
-    public abstract Account toAccount(AccountRequestDTO accountRequestDTO);
+    @Mapping(target = "id", ignore = true)
+    Account toAccount(AccountRequestDTO accountRequestDTO);
 
-//    @BeforeMapping
-//    UUID generationAccountId(Account account){
-//        account.setId(UUID.randomUUID());
-//        return account.getId();
-//    }
 }
